@@ -197,6 +197,152 @@ body {
 .module-image img { width: 100%; border-radius: 14px; opacity: 0.9; transition: 0.35s ease; }
 .module-content:hover .module-image img { transform: scale(1.05); opacity: 1; }
 
+/* --- SECTION ROADMAP HOME PAGE --- */
+
+/* Conteneur principal de la timeline */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* La ligne verticale centrale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 31px; /* Aligné avec le centre des cercles numérotés */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #3b82f6, #10b981, #a78bfa);
+    border-radius: 2px;
+}
+
+/* Chaque bloc d'étape */
+.module {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.module:hover {
+    transform: translateX(10px); /* Petit effet de glissement au survol */
+}
+
+/* Le cercle avec "Step 1", "Step 2", etc. */
+.module-number {
+    min-width: 64px;
+    height: 64px;
+    background: #18181b;
+    border: 2px solid #3b82f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+/* Le contenu textuel de l'étape */
+.module-content {
+    background: #1e1e21;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #2d2d30;
+    flex-grow: 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styles pour les titres et textes dans la roadmap */
+.module-text h3 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.module-text p {
+    margin-bottom: 10px;
+}
+
+/* --- ADAPTATION COULEURS PAR ÉTAPE --- */
+
+/* Étape 2 en Vert */
+.module:nth-child(2) .module-number {
+    border-color: #10b981;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+/* Étape 3 en Violet */
+.module:nth-child(3) .module-number {
+    border-color: #a78bfa;
+    box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
+}
+
+/* Responsive : ajustement pour mobile */
+@media (max-width: 600px) {
+    .module {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .timeline::before {
+        display: none; /* On cache la ligne sur petit écran pour gagner de la place */
+    }
+}
+/* --- FINAL OBJECTIVE BLOCK --- */
+
+.final-objective {
+    text-align: center;
+    margin-top: 60px; /* Plus d'espace pour marquer la fin */
+    padding: 30px;
+    border: 2px dashed #3b82f6;
+    border-radius: 16px;
+    background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(17, 24, 39, 0.5));
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+/* Effet au survol : la bordure devient pleine et brille */
+.final-objective:hover {
+    border-style: solid;
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
+    transform: translateY(-5px);
+}
+
+.final-objective h4 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Petit badge d'accentuation pour le texte */
+.final-objective p {
+    color: #cbd5e1;
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Ajout d'une petite décoration subtile en arrière-plan (facultatif) */
+.final-objective::before {
+    content: '🏆';
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    font-size: 4rem;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}
+
 /* ========== 6. LEVEL PICKER (CEFR) ========== */
 .level-container {
   background: rgba(15, 23, 42, 0.6);
