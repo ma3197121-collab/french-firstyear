@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 01 - Foundations</title>
+    <link rel="stylesheet" href="home.css"> 
+</head>
+<body>
+
+   <div class="module-page">
+    
+    <header class="hero">
+        <div class="module-nav-top">
+            <a href="year1.html" class="module-btn" style="background: rgba(255,255,255,0.1);">← Back to Curriculum</a>
+        </div>
+        <h1>Module 01: Foundations & Professional Identity</h1>
+        <p>Master the basics of professional introduction in French.</p>
+    </header>
+
+    <main>
+
+      <section class="block">
+    <h2 class="block-title">📖 Your Learning Journey</h2>
+    
+    <div class="timeline">
+
+        <div class="module">
+            <span class="module-number">01</span>
+            <div class="module-content">
+                <div class="module-text">
+                    <span class="badge-tag" style="background: rgba(59, 130, 246, 0.2); color: #3b82f6; padding: 4px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Grammar</span>
+                    <h3 style="color: white; margin: 10px 0;">The Power Verbs</h3>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">
+                        Master the foundations of every sentence with 
+                        <span class="pronounce" onclick="parler('être', this)">être</span> (to be) and 
+                        <span class="pronounce" onclick="parler('avoir', this)">avoir</span> (to have).
+                    </p>
+                </div>
+                <div class="module-image" style="font-size: 3rem; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                    👤
+                </div>
+            </div>
+        </div>
+
+        <div class="module">
+            <span class="module-number">02</span>
+            <div class="module-content">
+                <div class="module-text">
+                    <span class="badge-tag" style="background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 4px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Vocabulary</span>
+                    <h3 style="color: white; margin: 10px 0;">Digital Job Titles</h3>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">
+                        Learn to introduce yourself as a 
+                        <span class="pronounce" onclick="parler('Chef de projet', this)">Chef de projet</span> or a 
+                        <span class="pronounce" onclick="parler('Community Manager', this)">Community Manager</span>.
+                    </p>
+                </div>
+                <div class="module-image" style="font-size: 3rem; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                    💻
+                </div>
+            </div>
+        </div>
+
+        <div class="module">
+            <span class="module-number">03</span>
+            <div class="module-content">
+                <div class="module-text">
+                    <span class="badge-tag" style="background: rgba(124, 58, 237, 0.2); color: #a78bfa; padding: 4px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Structure</span>
+                    <h3 style="color: white; margin: 10px 0;">Using Articles</h3>
+                    <p style="font-size: 0.9rem; color: #94a3b8;">
+                        Learn when to use 
+                        <span class="pronounce" onclick="parler('un, une, le, la', this)">un, une, le, la</span> 
+                        correctly in a professional context.
+                    </p>
+                </div>
+                <div class="module-image" style="font-size: 3rem; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                    📁
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <section class="block">
+            <h2 class="block-title">✍️ Practice Exercises</h2>
+
+            <div class="exercise-box">
+                <h3 style="color: #3b82f6;">Exercise 1: The "Who am I?" Quiz</h3>
+                <p>Complete the sentences with the correct form of the verb <strong>Être</strong> or <strong>Avoir</strong>:</p>
+                
+                <div class="code-input-area">
+                   1. <span class="pronounce" onclick="parler('Je ')">Je</span> 
+                    <input type="text" class="input-blank" placeholder="être"> 
+                    <span class="pronounce" onclick="parler('community manager')">community manager</span>. <br>
+                    
+                    2. <span class="pronounce" onclick="parler('Nous ')">Nous</span> 
+                    <input type="text" class="input-blank" placeholder="avoir"> 
+                    <span class="pronounce" onclick="parler('une agence de marketing')">une agence de marketing</span>. <br>
+                    
+                    3. <span class="pronounce" onclick="parler('Vous')">Vous</span> 
+                    <input type="text" class="input-blank" placeholder="être"> 
+                    <span class="pronounce" onclick="parler('français?')">français?</span> 
+                </div>
+                <button class="check-btn" onclick="checkAnswers()">Check My Answers</button>
+                </div>
+                <button class="check-btn" onclick="alert('Checking answers...')">Check My Answers</button>
+            </div>
+
+            <div class="exercise-box" style="border-color: #10b981;">
+                <h3 style="color: #10b981;">Exercise 2: Pitch your Profile</h3>
+                <p>Rearrange the words to create a professional introduction:  (Click to listen)</p>
+                <div class="code-input-area">
+                    <em class="pronounce" onclick="parler('suis/ Bonjour/ je/ marketing/ étudiant/ en/ digital')">"suis / Bonjour / je / marketing / étudiant / en/ digital"</em>
+                </div>
+                <textarea class="writing-area" id="userPitch" placeholder="Ecrivez votre phrase ici..."></textarea>
+            </div>
+                <div class="code-input-area" style="border-color: rgba(16, 185, 129, 0.3);">
+                      <div class="code-input-area">
+                    <em class="pronounce" onclick="parler('une/ agence/ Nous/ de/ avons/ marketing/ ./ digitale')">"une / agence / Nous / de / avons / marketing/ ./ digitale"</em>
+                </div> 
+                <textarea class="writing-area" id="userPitch" placeholder="Ecrivez votre phrase ici..."></textarea>
+            </div>
+
+                <p style="margin-top: 20px;"><strong>Answer:</strong></p>
+                <textarea class="writing-area" placeholder="Write your full sentence here..."></textarea>
+                <button class="check-btn" style="background: #10b981;">Validate Pitch</button>
+            </div>
+        </section>
+
+    </main>
+
+ <script>
+    function parler(texte) {
+        // Vérifie si la synthèse vocale est disponible
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel(); // Arrête la voix en cours
+            const msg = new SpeechSynthesisUtterance(texte);
+            msg.lang = 'fr-FR'; // Langue française
+            msg.rate = 0.9;      // Vitesse
+            window.speechSynthesis.speak(msg);
+        } else {
+            alert("Désolé, votre navigateur ne supporte pas la synthèse vocale.");
+        }
+    }
+
+    function checkAnswers() {
+        alert("Réponses vérifiées ! Continuez comme ça.");
+    }
+</script>
+<script>
+function parler(texte, element) {
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        
+        const msg = new SpeechSynthesisUtterance(texte);
+        msg.lang = 'fr-FR';
+        msg.rate = 0.9;
+
+        // Quand la voix commence : on ajoute la couleur verte
+        msg.onstart = function() {
+            if(element) element.classList.add('speaking');
+        };
+
+        // Quand la voix finit : on retire la couleur
+        msg.onend = function() {
+            if(element) element.classList.remove('speaking');
+        };
+
+        window.speechSynthesis.speak(msg);
+    }
+}
+</script>
+    <footer class="footer">
+        Academic Learning Material – Module 01 Foundations
+    </footer>
+
+   </div> </body>
+</html>
